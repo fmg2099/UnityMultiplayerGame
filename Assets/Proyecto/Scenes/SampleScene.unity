@@ -152,7 +152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000034332275}
   m_SizeDelta: {x: 0, y: 40}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &175642057
@@ -1411,10 +1411,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelMainMenu: {fileID: 375781981}
+  namesSelector: {fileID: 2128357088}
   PanelClient: {fileID: 1476020512}
   PanelHUD: {fileID: 921726279}
   labelHealth: {fileID: 837311502}
   playerNameTemplate: {fileID: 1136347893}
+  namesList: []
 --- !u!4 &785320620
 Transform:
   m_ObjectHideFlags: 0
@@ -3206,7 +3208,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1042661348}
   m_HandleRect: {fileID: 1042661347}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3686,7 +3688,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 0, y: 150}
+  m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1671723291
 MonoBehaviour:

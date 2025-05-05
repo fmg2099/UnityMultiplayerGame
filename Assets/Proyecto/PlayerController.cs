@@ -38,6 +38,11 @@ public class PlayerController : NetworkBehaviour
     public AudioClip DeathSound;
     AudioSource audioSource;
 
+
+    public int nameId = 0; // id del nombre seleccionado
+
+
+
     public override void OnNetworkSpawn()
     {
         Debug.Log("hola mundo soy un " + (IsClient ? "cliente" : "servidor"));
@@ -64,6 +69,7 @@ public class PlayerController : NetworkBehaviour
             cam.transform.LookAt(transform.position + cameraViewOffset);
         }
 
+        nameId = hud.selectedNameIndex;
         createPlayerNameHUD();
     }
 
@@ -128,7 +134,14 @@ public class PlayerController : NetworkBehaviour
         {
             //playerName arriba del jugador
             Camera maincam = GameObject.Find("Main Camera").GetComponent<Camera>();
+
+            playerName.text = hud.namesList[nameId];
+
             playerName.transform.position = maincam.WorldToScreenPoint(transform.position + new Vector3(0, 1.2f, 0));
+
+
+
+
         }
 
         if (IsServer)
